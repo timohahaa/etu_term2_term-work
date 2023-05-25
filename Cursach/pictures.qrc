@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/doctors">
+        <file>man.png</file>
+        <file>woman.png</file>
+    </qresource>
+    <qresource prefix="/gifs">
+        <file>loading.gif</file>
+    </qresource>
+</RCC>

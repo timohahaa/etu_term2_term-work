@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>929</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Записаться к врачу</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: #D2EAF0;
+color:  #102A30;
+
+QScrollBar::handle:horizontal
+    {
+        background-color: blue;      /* #605F5F; */
+        min-width: 5px;
+        border-radius: 4px;
+    }</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="appointmentForm">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="nameForm">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">padding: 4px;
+color: #102A30;
+font-size: 10pt;
+font: 700 &quot;Segoe UI&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>Имя</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="nameLE">
+            <property name="styleSheet">
+             <string notr="true">background: white;</string>
+            </property>
+            <property name="maxLength">
+             <number>20</number>
+            </property>
+            <property name="placeholderText">
+             <string>Иван</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="surnameForm">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="styleSheet">
+             <string notr="true">padding: 4px;
+color: #102A30;
+font-size: 10pt;
+font: 700 &quot;Segoe UI&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>Фамилия</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="surnameLE">
+            <property name="styleSheet">
+             <string notr="true">background: white;</string>
+            </property>
+            <property name="maxLength">
+             <number>20</number>
+            </property>
+            <property name="placeholderText">
+             <string>Иванович</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="fathernameForm">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="styleSheet">
+             <string notr="true">padding: 4px;
+color: #102A30;
+font-size: 10pt;
+font: 700 &quot;Segoe UI&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>Отчество</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="fathernameLE">
+            <property name="styleSheet">
+             <string notr="true">background: white;</string>
+            </property>
+            <property name="maxLength">
+             <number>20</number>
+            </property>
+            <property name="placeholderText">
+             <string>Иванов</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="insuranceForm">
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="styleSheet">
+             <string notr="true">padding: 4px;
+color: #102A30;
+font-size: 10pt;
+font: 700 &quot;Segoe UI&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>Полис</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="insuranceLE">
+            <property name="styleSheet">
+             <string notr="true">background: white;</string>
+            </property>
+            <property name="maxLength">
+             <number>16</number>
+            </property>
+            <property name="placeholderText">
+             <string>16 цифр</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="doctorForm">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">padding: 4px;
+color: #102A30;
+font-size: 10pt;
+font: 700 &quot;Segoe UI&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>Врач</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="doctorSelector">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: #F4FAFB;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="dateForm">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="styleSheet">
+             <string notr="true">padding: 4px;
+color: #102A30;
+font-size: 10pt;
+font: 700 &quot;Segoe UI&quot;;
+</string>
+            </property>
+            <property name="text">
+             <string>Дата приёма</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="dateEdit">
+            <property name="styleSheet">
+             <string notr="true">background:  #F4FAFB;</string>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="timeForm">
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="styleSheet">
+             <string notr="true">padding: 4px;
+color: #102A30;
+font-size: 10pt;
+font: 700 &quot;Segoe UI&quot;;
+
+</string>
+            </property>
+            <property name="text">
+             <string>Время приёма</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="MyTimeEdit" name="timeEdit">
+            <property name="styleSheet">
+             <string notr="true">background:  #F4FAFB;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonMakeAppointment">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#buttonMakeAppointment{
+background: #62B6CB;
+border: 1px solid #2B7081;
+border-radius: 3px;
+padding: 4px;
+color: #102A30;
+font-size: 15pt;
+font: 700 &quot;Segoe UI&quot;;
+}
+
+QPushButton:hover#buttonMakeAppointment{
+background:  #79C0D2 ;
+}</string>
+          </property>
+          <property name="text">
+           <string>Записаться на приём</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="tabLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="styleSheet">
+             <string notr="true">background: #62B6CB;
+border: 1px solid #2B7081;
+border-radius: 3px;
+padding: 4px;
+color: #102A30;
+font-size: 12pt;
+font: 700 &quot;Segoe UI&quot;;
+text-align: center;</string>
+            </property>
+            <property name="text">
+             <string>Информация о врачах</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="styleSheet">
+           <string notr="true">
+QTabWidget::pane{
+background: white;
+border: 3px solid #2B7081;
+border-bottom-left-radius: 6px;
+border-bottom-right-radius: 6px;
+padding: 3px;
+}
+
+
+QTabBar::tab{
+background: #62B6CB;
+border: 2px solid  #2B7081;
+border-bottom: 0px;
+border-top-right-radius: 5px;
+padding: 2px;
+margin-right: 1px;
+color: #102A30;
+font-size: 12pt;
+font: 700 &quot;Segoe UI&quot;;
+}
+
+QTabBar::tab:hover{
+background:  #79C0D2 ;
+}
+
+QTabBar::tab:selected{
+background:  #3B9AB1 ;
+}
+
+QWidget{
+background: white;
+}
+</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Tab 1</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>Tab 2</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonUpdateDocInfo">
+          <property name="styleSheet">
+           <string notr="true">QPushButton#buttonUpdateDocInfo{
+background: #62B6CB;
+border: 1px solid #2B7081;
+border-radius: 3px;
+padding: 2px;
+color: #102A30;
+font-size: 12pt;
+font: 700 &quot;Segoe UI&quot;;
+}
+
+QPushButton:hover#buttonUpdateDocInfo{
+background:  #79C0D2 ;
+}</string>
+          </property>
+          <property name="text">
+           <string>Обновить информацию о врачах</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_9">
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #2B7081;
+border-right: 0px;
+border-left: 0px;
+padding: 4px;
+color: #102A30;
+font-size: 9pt;
+font: 700 &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string> ФГБУ Поликлиника №2281337</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #2B7081;
+border-right: 0px;
+border-left: 0px;
+color: #102A30;
+padding: 4px;
+font-size: 9pt;
+font: 700 &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Адрес: улица Пушкина, дом 8</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_11">
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #2B7081;
+border-right: 0px;
+border-left: 0px;
+padding: 4px;
+color: #102A30;
+font-size: 9pt;
+font: 700 &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Телефон: 88005553535</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>929</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyTimeEdit</class>
+   <extends>QTimeEdit</extends>
+   <header>MyTimeEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
